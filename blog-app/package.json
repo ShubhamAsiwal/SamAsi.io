@@ -2,7 +2,7 @@
   "name": "blog-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ShubhamAsiwal.github.io/SamAsi",  // Replace with your GitHub Pages URL
+  "homepage": "https://ShubhamAsiwal.github.io/SamAsi",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
