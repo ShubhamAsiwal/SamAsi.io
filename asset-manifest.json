@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SamAsi/static/css/main.d5289b2f.css",
+    "main.js": "/SamAsi/static/js/main.82c096ac.js",
+    "index.html": "/SamAsi/index.html",
+    "main.d5289b2f.css.map": "/SamAsi/static/css/main.d5289b2f.css.map",
+    "main.82c096ac.js.map": "/SamAsi/static/js/main.82c096ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5289b2f.css",
+    "static/js/main.82c096ac.js"
+  ]
+}
