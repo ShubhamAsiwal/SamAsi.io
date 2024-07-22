@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewsAPI Integration</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #dataDisplay {
+            margin-top: 20px;
+        }
+
+        #loadingIndicator {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">NewsAPI Integration</h1>
+        <form id="apiKeyForm" class="mb-4">
+            <div class="form-group">
+                <label for="apiKey">API Key:</label>
+                <input type="text" class="form-control" id="apiKey" name="apiKey" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="loadingIndicator" class="text-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p>Loading data...</p>
+        </div>
+        <div id="dataDisplay"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('apiKeyForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const apiKey = document.getElementById('apiKey').value;
+
+            // Show the loading indicator
+            document.getElementById('loadingIndicator').style.display = 'block';
+            document.getElementById('dataDisplay').innerHTML = ''; // Clear previous data
+
+            try {
+                const response = await fetch('/api/news', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ apiKey: apiKey })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                displayData(data);
+            } catch (error) {
+                console.error('Fetch error:', error);
+                document.getElementById('dataDisplay').innerHTML = 'Error fetching data';
+            } finally {
+                // Hide the loading indicator
+                document.getElementById('loadingIndicator').style.display = 'none';
+            }
+        });
+
+        function displayData(data) {
+            const dataDisplay = document.getElementById('dataDisplay');
+            if (Array.isArray(data) && data.length > 0) {
+                let html = '<table class="table table-bordered"><thead><tr><th>Title</th><th>Abstract</th></tr></thead><tbody>';
+                data.forEach(item => {
+                    html += `<tr><td>${item.title || 'No Title'}</td><td>${item.abstract || 'No Abstract'}</td></tr>`;
+                });
+                html += '</tbody></table>';
+                dataDisplay.innerHTML = html;
+            } else {
+                dataDisplay.innerHTML = '<div class="alert alert-info">No data available</div>';
+            }
+        }
+    </script>
+</body>
+</html>

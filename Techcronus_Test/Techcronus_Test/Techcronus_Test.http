@@ -1,0 +1,6 @@
+@Techcronus_Test_HostAddress = http://localhost:5159
+
+GET {{Techcronus_Test_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

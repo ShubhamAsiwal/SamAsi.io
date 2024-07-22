@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "6sLN/kIaQyIgE8V6v7D66y6kK3nFilpap6/CtD0GJ14=",
+  "Source": "Techcronus_Test",
+  "BasePath": "_content/Techcronus_Test",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Techcronus_Test\\wwwroot",
+      "Source": "Techcronus_Test",
+      "ContentRoot": "D:\\Techcronus_Test\\Techcronus_Test\\wwwroot\\",
+      "BasePath": "_content/Techcronus_Test",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Techcronus_Test\\Techcronus_Test\\wwwroot\\index.html",
+      "SourceId": "Techcronus_Test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Techcronus_Test\\Techcronus_Test\\wwwroot\\",
+      "BasePath": "_content/Techcronus_Test",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

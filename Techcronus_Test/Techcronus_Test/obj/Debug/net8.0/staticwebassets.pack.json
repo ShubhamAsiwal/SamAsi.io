@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Techcronus_Test\\Techcronus_Test\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Techcronus_Test.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Techcronus_Test.props",
+      "PackagePath": "build\\Techcronus_Test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Techcronus_Test.props",
+      "PackagePath": "buildMultiTargeting\\Techcronus_Test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Techcronus_Test.props",
+      "PackagePath": "buildTransitive\\Techcronus_Test.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
